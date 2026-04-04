@@ -2,6 +2,8 @@ package com.suraj.usermanagement.controller;
 import com.suraj.usermanagement.model.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 public class MyController {
@@ -23,7 +25,12 @@ public class MyController {
     	return user;
     	
     }
+    
+    @PostMapping("/addUser")
+    public User addUser(@RequestBody User user) {
+    	return user;
+    	
+    }
 }
-
 
 
